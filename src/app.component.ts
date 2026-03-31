@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Post } from './models/post.model';
 import { PostsService } from './services/posts.service';
-// import { PostsService } from './services/posts.service';
-// import { PostsService } from './services/posts.service';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +31,7 @@ export class AppComponent implements OnInit {
       next: (posts) => {
         console.log('coming in fetch result..', posts);
         this.isLoading = false;
-
         this.posts = posts;
-
         console.log('is loading...', this.isLoading);
       },
       error: (err) => {
